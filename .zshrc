@@ -4,6 +4,7 @@
 export PATH=$HOME/.gem/ruby/2.3.0/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$HOME/.local/bin
 
 export GOPATH=$HOME/go
 
@@ -115,3 +116,23 @@ export NVM_DIR="$HOME/.nvm"
 
 # added by travis gem
 [ -f /home/alexander/.travis/travis.sh ] && source /home/alexander/.travis/travis.sh
+# xmodmap -e "keycode 49 = less greater bar bar bar"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/alexander/Repos/netlify-travis-integration/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/alexander/Repos/netlify-travis-integration/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/alexander/Repos/netlify-travis-integration/node_modules/tabtab/.completions/sls.zsh ]] && . /home/alexander/Repos/netlify-travis-integration/node_modules/tabtab/.completions/sls.zsh
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$PATH:$HOME/.gem/bin"
+
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem
+
+bindkey 'OH' beginning-of-line
+bindkey 'OF' end-of-line
+
+if [[ -o login ]]; then
+    read-quote $HOME/.config/shell-quotes/aurelius.txt
+fi
