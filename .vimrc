@@ -20,6 +20,11 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'fatih/vim-go'
 Plugin 'cespare/vim-toml'
 Plugin 'w0rp/ale'
+Plugin 'chrisbra/csv.vim'
+Plugin 'hashivim/vim-terraform'
+Plugin 'eslint/eslint'
+Plugin 'maxmellon/vim-jsx-pretty'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -37,6 +42,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set number
+set backupcopy=yes
 syntax on
 
 set rtp+=/usr/local/opt/fzf
